@@ -1,1 +1,1 @@
-# eastFood
+# EastFood
