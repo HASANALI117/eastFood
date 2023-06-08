@@ -20,7 +20,10 @@ h1 {
 .rt h3 {
   padding: 0 20px;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 #mid-section {
   text-align: center;
   font-weight: 700;
