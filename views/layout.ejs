@@ -13,7 +13,7 @@
        rel="stylesheet"
      />
      <!-- CSS Sheet -->
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 
 </head>
 <body>
@@ -25,17 +25,16 @@
        </div>
        
        <div class="rt">
-           <a href=""> <h3>Sign Up</h3>  </a>
-           <a href=""> <h3>Sign In</h3>    </a>
-
+           
            <% if (currentUser) {%>
             
-            <a href="">log Out</a>
-           <% currentUser.firstName %>
-
-         <% } else { %>
-                     <a href="">Sign Up</a>
-                     <a href="">Sign In</a>
+            <a href="/auth/logout">log Out</a>
+            <% currentUser.firstName %>
+            
+            <% } else { %>
+                <a href="/auth/signup"> <h3>Sign Up</h3>  </a>
+                <a href="/auth/signin"> <h3>Sign In</h3>    </a>
+  
 
              <% } %>
        </div>
@@ -86,7 +85,7 @@
         <p>© eastFood</p>
       </div>
 
-
+<%-body%>
 
 </body>
 </html>
