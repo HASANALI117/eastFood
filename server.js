@@ -3,10 +3,11 @@ const  mongoose=require('mongoose')
 const expressLayouts = require('express-ejs-layouts')
 const session=require('express-session')
 
-// const passport=require('')
+const passport=require('./lib/passportConfig')
 
 //import our routes
-
+const indexRoute = require('./routes/index')
+const authRoute = require('./routes/auth')
 //install our app
 const app=express()
 
@@ -36,6 +37,8 @@ app.use(function(req,res,next){
 })
 
 //mount our routes
+app.use('/',indexRoute)
+app.use('/',authRoute)
 
 //mount our server
 
