@@ -8,6 +8,7 @@ const passport=require('./lib/passportConfig')
 //import our routes
 const indexRoute = require('./routes/index')
 const authRoute = require('./routes/auth')
+const dessertDevRoute=require('./routes/dessert')
 //install our app
 const app=express()
 
@@ -39,6 +40,7 @@ app.use(function(req,res,next){
 //mount our routes
 app.use('/',indexRoute)
 app.use('/',authRoute)
+app.use('/',dessertDevRoute)
 
 //mount our server
 
