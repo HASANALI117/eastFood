@@ -2,7 +2,6 @@ body {
     font-family: "Nunito", sans-serif;
     font-weight: 700;
     margin: 0;
-    background-color: rgb(243, 185, 143);
   }
   nav {
     display: flex;
@@ -90,4 +89,3 @@ body {
     font-size: small;
     font-weight: 100;
   }
-  

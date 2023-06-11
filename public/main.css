@@ -1,0 +1,158 @@
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  font-family: "Bree Serif", serif;
+  font-size: 40px;
+  margin: 5px 20px;
+}
+.rt {
+  display: flex;
+  justify-content: space-between;
+}
+.rt h3 {
+  padding: 0 20px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#mid-section {
+  text-align: center;
+  font-weight: 700;
+}
+.mid-section-header p {
+  font-size: 15px;
+  margin-top: 0;
+}
+.mid-section-header h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+.box {
+  height: 320px;
+  width: 405px;
+  color: white;
+}
+.b-1 {
+  background-image: url("https://nectarsapp.s3.me-south-1.amazonaws.com/media/606f1acdcd2483697904a75f/item/Pepsi");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-2 {
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.creedfoodservice.co.uk%2F121040-diet-pepsi-can-24x330ml.html&psig=AOvVaw1yrsEo7AMklnpDz1q_3eZg&ust=1686571787374000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKiQxNSXu_8CFQAAAAAdAAAAABAE");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-3 {
+  background-image: url("https://nectarsapp.s3.me-south-1.amazonaws.com/media/606f1acdcd2483697904a75f/item/Orange_Juice1631093370967");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  b-4{
+    background-image: url("https://nectarsapp.s3.me-south-1.amazonaws.com/media/606f1acdcd2483697904a75f/item/Banana_Juice1631093460839");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+b-5 {
+  background-image: url("https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.completecocktails.com%2Fimg%2Fd%2Fl%2FMixedBerryMojito.png&tbnid=GZukxa0_MJ0h_M&vet=12ahUKEwjg-bbrmLv_AhWlmScCHaHYCc4QMyg5egQIARBZ..i&imgrefurl=http%3A%2F%2Fwww.completecocktails.com%2FDrinks%2FMixedBerryMojito.aspx&docid=_LNbzjUKgYoS_M&w=142&h=232&q=mojito%20mix%20berry&ved=2ahUKEwjg-bbrmLv_AhWlmScCHaHYCc4QMyg5egQIARBZ");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+b-6 {
+  background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.biotona.be%2Fwp-content%2Fuploads%2Fpomegranate-mojito-web-4.jpg&tbnid=5v4Nklgw8y5BcM&vet=12ahUKEwjN0-ePmbv_AhVRpycCHU5TDZwQMygDegUIARDfAQ..i&imgrefurl=https%3A%2F%2Fwww.biotona.be%2Fen%2Fblog%2Frecipes%2Fpomegranate-mojito%2F&docid=kQZIRGgYLPicoM&w=1701&h=3023&q=mojito%20pomegranate&ved=2ahUKEwjN0-ePmbv_AhVRpycCHU5TDZwQMygDegUIARDfAQ");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.in-cards {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: inherit;
+  height: inherit;
+}
+.in-cards h3 {
+  margin: 0 10px;
+  font-size: 30px;
+}
+.in-cards p {
+  margin: 10px 10px;
+  font-size: 16px;
+}
+.cards-bottom {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0;
+}
+.cb-1 {
+  width: 405px;
+  background-color: #efefef;
+}
+#footer {
+  text-align: center;
+  background-color: #2b2d2e;
+  color: white;
+  height: 100px;
+  margin-top: 60px;
+}
+#footer p {
+  padding: 40px;
+  font-size: small;
+  font-weight: 100;
+}
+
+.b-02 {
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fhungerstation.com%2Fsa-en%2Frestaurant%2Fbasbousa-wow-5%2Ftabuk%2Fmuruj-al-amir%2F37430&psig=AOvVaw0VQh6vR6So9n7j8Tdpzodk&ust=1686573171942000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIjE6eecu_8CFQAAAAAdAAAAABAE");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-03 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9XoQglmrXYtR48x2RsAKYwwqaeo7rPOIesg&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  .b-001{
+  background-image: url("https://nectarsapp.s3.me-south-1.amazonaws.com/media/606f1acdcd2483697904a75f/item/Maharaja_Chicken_Biryani");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-002{
+  background-image: url("https://nectarsapp.s3.me-south-1.amazonaws.com/media/606f1acdcd2483697904a75f/item/Chicken_with_Rice");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-003 {
+  background-image: url("https://nectarsapp.s3.me-south-1.amazonaws.com/media/606f1acdcd2483697904a75f/item/Mini_Italy1623326290961");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-004{
+  background-image: url("https://nectarsapp.s3.me-south-1.amazonaws.com/media/606f1acdcd2483697904a75f/item/Chicken_Kebab");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+b-005{
+  background-image: url("https://nectarsapp.s3.me-south-1.amazonaws.com/media/606f1acdcd2483697904a75f/item/Chilo_Kebab_with_rice");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+b-006 {
+  background-image: url("https://nectarsapp.s3.me-south-1.amazonaws.com/media/606f1acdcd2483697904a75f/item/Family_Lamb_Shank_Meal");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
