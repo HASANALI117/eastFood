@@ -45,6 +45,21 @@ a {
   width: 405px;
   color: white;
 }
+.b-11{
+  background-image: url("https://t3.ftcdn.net/jpg/05/78/78/44/360_F_578784418_YpH8UTACeKH6vU8EH94md5qzp0gmjAOo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-12{
+  background-image: url("https://media.istockphoto.com/id/1375238139/photo/sambali-traditional-turkish-dessert-from-izmir.jpg?s=612x612&w=0&k=20&c=hggoL73lZv3IKgnyP0NNXLRe94qtpcSV70mX10WHQRE=");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-13{
+  background-image: url("https://media.istockphoto.com/id/1215358582/photo/turkish-dessert-baklava.jpg?s=612x612&w=0&k=20&c=WT7yDyNoZ7VJVc_KqSPlwtv2WFJA-NPso1FVm6mPdN0=");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .b-21 {
   background-image: url("https://i.pinimg.com/originals/ac/5d/a5/ac5da537b1ec83b35cb4ebbcfbc07eb8.jpg") ;
   background-repeat: no-repeat;
@@ -75,8 +90,33 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-2{
-  background-image: url();
+.b-31{
+  background-image: url("https://media.cnn.com/api/v1/images/stellar/prod/230327115255-embargoed-01-pepsi-new-logo-2023.jpg?c=original");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-32{
+  background-image: url("https://cdnb.artstation.com/p/assets/images/images/058/868/869/large/hamza-mahmood-diet.jpg?1675150794");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-33{
+  background-image: url("https://www.foodtodayeg.com/Content/Upload/large/520221811226963042456.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-34{
+  background-image: url("https://www.atyabtabkha.com/uploads/sites/2/2021/10/b5f0e40fff6549a8716e2219780641278a82f75b.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-35{
+  background-image: url("https://photos-us.bazaarvoice.com/photo/2/cGhvdG86ZHJpc2NvbGxz/bc06e197-a3b8-572d-b471-10c37403d54a");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-36{
+  background-image: url("https://images.getrecipekit.com/20211223135801-a-20glass-20of-20pomegranate-20mojito-20mocktail-20in-20a-20wooden-20table.png?aspect_ratio=16:9&quality=90&");
   background-repeat: no-repeat;
   background-size: cover;
 }
