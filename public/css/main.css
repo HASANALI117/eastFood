@@ -45,18 +45,38 @@ a {
   width: 405px;
   color: white;
 }
-.b-1 {
-  background-image: url("../images/fitzroy.jpg");
+.b-21 {
+  background-image: url("https://i.pinimg.com/originals/ac/5d/a5/ac5da537b1ec83b35cb4ebbcfbc07eb8.jpg") ;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-2 {
-  background-image: url("../images/st-kilda.jpg");
+.b-22 {
+  background-image: url("https://img.sunset02.com/sites/default/files/chicken-rice-arroz-con-pollo-su.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-3 {
-  background-image: url("../images/central-business-district.jpg");
+.b-23 {
+  background-image: url("https://www.theculinaryfoodgroup.com/wp-content/uploads/2021/08/iStock-1302436271.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-24 {
+  background-image: url("https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Kebab.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-25 {
+  background-image: url("https://en.icro.ir/uploads/1/2022/Apr/04/kabab%20koobideh.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-26{
+  background-image: url("https://simplebites.net/wp-content/uploads/2021/12/dinner-plate-lamb-scaled.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-2{
+  background-image: url();
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -98,3 +118,9 @@ a {
   font-size: small;
   font-weight: 100;
 }
+
+
+/* adding devs background */
+
+
+
