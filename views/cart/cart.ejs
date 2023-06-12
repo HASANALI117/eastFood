@@ -1,0 +1,70 @@
+<form method="POST"  action="/cart">
+<h1>Cart</h1>
+
+<% if (cartItems.length === 0) { %>
+  <p>Your cart is empty.</p>
+<% } else { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% cartItems.forEach(item => { %>
+        <tr>
+          <td><%= item.name %></td>
+          <td><%= item.price %></td>
+          <td><%= item.quantity %></td>
+          <td>
+            <button onclick="updateQuantity('<%= item._id %>', '<%= item.quantity + 1 %>')">Increase Quantity</button>
+            <button onclick="removeItem('<%= item._id %>')">Remove Item</button>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% } %>
+
+
+<script>
+    function updateQuantity(itemId, newQuantity) {
+      fetch(`/cart/${itemId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ quantity: newQuantity })
+      })
+      .then(response => {
+        if (response.ok) {
+          location.reload(); // Refresh the page to update the quantity
+        } else {
+          console.error('Failed to update quantity.');
+        }
+      })
+      .catch(error => {
+        console.error(error);
+      });
+    }
+  
+    function removeItem(itemId) {
+      fetch(`/cart/${itemId}`, {
+        method: 'DELETE'
+      })
+      .then(response => {
+        if (response.ok) {
+          location.reload(); // Refresh the page to remove the item
+        } else {
+          console.error('Failed to remove item.');
+        }
+      })
+      .catch(error => {
+        console.error(error);
+      });
+    }
+  </script>
+  </form>
