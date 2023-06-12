@@ -1,0 +1,26 @@
+<h3>Edit Profile</h3>
+
+<form method="POST" action="/user/edit"> 
+    <div>
+        <label>First Name</label>
+        <input type="text" name="firstName" value="<%= currentUser.firstName %>">
+    </div>
+
+    <div>
+        <label>Last Name</label>
+        <input type="text" name="lastName" value="<%= currentUser.lastName %>">
+    </div>
+
+    <div>
+        <label>Email Address</label>
+        <input type="text" name="emailAddress" value="<%= currentUser.emailAddress %>">
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input type="text" name="password" value="<%= currentUser.password %>">
+    </div>
+
+    <input type="hidden" name ="id" value="<%=currentUser._id%>">
+    <input type="submit">
+</form>
