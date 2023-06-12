@@ -45,6 +45,21 @@ a {
   width: 405px;
   color: white;
 }
+.b-1{
+  background-image: url("https://img.freepik.com/free-photo/turkish-kunefe-garnished-with-pistachio_140725-3971.jpg?w=2000");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.b-2{
+  background-image: url("https://images.pexels.com/photos/3298637/pexels-photo-3298637.jpeg?cs=srgb&dl=pexels-cottonbro-studio-3298637.jpg&fm=jpg");
+  background-repeat: no-repeat ;
+  background-size: cover;
+}
+.b-3{
+  background-image: url("https://cdn.create.vista.com/api/media/medium/185258892/stock-photo-tattooed-female-bartender-showing-colleague?token=");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .b-11{
   background-image: url("https://t3.ftcdn.net/jpg/05/78/78/44/360_F_578784418_YpH8UTACeKH6vU8EH94md5qzp0gmjAOo.jpg");
   background-repeat: no-repeat;
