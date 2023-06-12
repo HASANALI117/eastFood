@@ -15,8 +15,6 @@ const cartRoute = require("./routes/cart")
 //install our app
 const app = express();
 
-const port = 4000;
-
 app.use(expressLayouts);
 app.set("view engine", "ejs");
 
@@ -30,7 +28,7 @@ app.use(
 
 app.use(
   session({
-    secret: "thisIsSecret!",
+    secret: "This is a secret.",
     saveUninitialized: true,
     resave: false,
     cookie: { maxAge: 86400000 },
@@ -54,8 +52,8 @@ app.use("/", cartRoute);
 
 //mount our server
 
-app.listen(port, () => {
-  console.log(`the menu open on port${port}`);
+app.listen(4000, () => {
+  console.log("Server running on port 4000");
 });
 
 //connect to dataBase
