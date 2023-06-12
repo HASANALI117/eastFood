@@ -12,6 +12,16 @@ h1 {
   font-size: 40px;
   margin: 5px 20px;
 }
+.Profile-t{
+  width: 50%;
+  text-align: center;
+  border: 2px solid black;
+  margin: 10%;
+}
+.td-profile{
+  border-top: 1px solid black;
+  padding: 10px;
+}
 .rt {
   display: flex;
   justify-content: space-between;

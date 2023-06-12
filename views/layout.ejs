@@ -18,11 +18,13 @@
   <body>
     <nav>
       <div>
-        <h1><a href="/">eastFood</a></h1>
+        <a href="/"><h1>eastFood</h1></a>
+
       </div>
 
       <div class="rt">
         <% if (currentUser) {console.log(currentUser)%>
+        <a href="/user/index">Profile</a>
         <a href="/auth/logout">log Out</a>
         <% currentUser.firstName %> <% } else { %>
         <a href="/auth/signup"> <h3>Sign Up</h3> </a>
