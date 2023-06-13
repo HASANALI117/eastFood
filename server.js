@@ -10,6 +10,7 @@ const indexRoute = require("./routes/index");
 const authRoute = require("./routes/auth");
 const menuRoute = require("./routes/menu");
 const userRoute = require("./routes/profile");
+const changePassRoute= require("./routes/change");
 
 //install our app
 const app = express();
@@ -48,6 +49,7 @@ app.use("/", indexRoute);
 app.use("/", authRoute);
 app.use("/", menuRoute);
 app.use("/", userRoute);
+app.use("/",changePassRoute)
 
 
 //mount our server

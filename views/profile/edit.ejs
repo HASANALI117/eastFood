@@ -1,3 +1,4 @@
+
 <h3>Edit Profile</h3>
 
 <form method="POST" action="/user/edit"> 
@@ -18,7 +19,8 @@
 
     <div>
         <label>Password</label>
-        <input type="text" name="password" value="<%= currentUser.password %>">
+        <input type="password" name="password" value="<%= currentUser.password  %>">
+        <input type="submit">
     </div>
 
     <input type="hidden" name ="id" value="<%=currentUser._id%>">
