@@ -1,3 +1,4 @@
+<form method="POST" action="/mainDishes">
 <div id="mid-section">
   <div class="mid-section-header">
     <h2>Main Dishes</h2>
@@ -20,21 +21,23 @@
       </div>
     </div>
 
-    <div class="box mainDishes-2">
-      <div class="in-cards">
-        <div>
-          <h3>Chicken With Rice</h3>
-          <p>price: 2.100 BD</p>
-          <a href="/cart">Add To Cart</a>
-        </div>
-      </div>
+<div class="box mainDishes-2">
+  <div class="in-cards">
+    <% products.forEach((product) => { %>
+    <div>
+      <h3>Chicken With Rice <%= product.name %></h3>
+      <p>price: 2.100 BD <%= product.price %></p>
+      <button onclick="addToCart('<%= product._id %>')">Add to Cart</button>
     </div>
+    <% }) %>
+  </div>
+</div>
 
     <div class="box mainDishes-3">
       <div class="in-cards">
         <div>
-          <h3>Mini Italy</h3>
-          <p>price: 3.400 BD</p>
+         <h3>Mini Italy</h3>
+          <p></p>price: 3.400 BD</p>
         </div>
       </div>
     </div>
@@ -97,3 +100,25 @@
     </div>
   </div>
 </div>
+<script>
+  function addToCart(productsId) {
+    fetch('/cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ productsId })
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Item added to cart');
+      } else {
+        console.error('Failed to add item to cart.');
+      }
+    })
+    .catch(error => {
+      console.error(error);
+    });
+  }
+</script>
+</form>

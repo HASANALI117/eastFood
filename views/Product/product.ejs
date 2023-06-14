@@ -1,0 +1,38 @@
+<form action="/products" method="POST">
+    <h1>Products Page</h1>
+    <% products.forEach((product) => { %>
+<div>
+    <%=product.img%>
+    <div>
+<h3> <%=product.name%></h3>
+<p>Price =<%=product.price%>BD</p>
+<p><%=product.desc%></p>
+<button onclick="addToCart('<%= product._id %>')">Add to Cart</button>
+
+</div>
+<% }) %>
+    </div>
+
+    
+    <script>
+        function addToCart(productsId) {
+          fetch('/cart', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ productsId })
+          })
+          .then(response => {
+            if (response.ok) {
+              alert('Item added to cart');
+            } else {
+              console.error('Failed to add item to cart.');
+            }
+          })
+          .catch(error => {
+            console.error(error);
+          });
+        }
+      </script>
+</form>

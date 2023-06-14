@@ -2,9 +2,15 @@ const mongoose = require("mongoose");
 
 const cartItemSchema = new mongoose.Schema({
     
-    name: String,
-    price: Number,
-    quantity: Number,  
+    name: {
+    type: String,  
+    } ,
+    price:{
+    type:Number,
+    } ,
+    quantity:{
+    type:Number,     
+    }  
        
   });
   

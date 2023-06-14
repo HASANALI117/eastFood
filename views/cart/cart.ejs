@@ -14,14 +14,14 @@
       </tr>
     </thead>
     <tbody>
-      <% cartItems.forEach(item => { %>
+      <% cartItems.forEach(cartItem => { %>
         <tr>
-          <td><%= item.name %></td>
-          <td><%= item.price %></td>
-          <td><%= item.quantity %></td>
+          <td><%= cartItem.name %>hello</td>
+          <td><%= cartItem.price %>1200</td>
+          <td><%= cartItem.quantity %>100</td>
           <td>
-            <button onclick="updateQuantity('<%= item._id %>', '<%= item.quantity + 1 %>')">Increase Quantity</button>
-            <button onclick="removeItem('<%= item._id %>')">Remove Item</button>
+            <button onclick="updateQuantity('<%= cartItem._id %>', '<%= cartItem.quantity + 1 %>')">Increase Quantity</button>
+            <button onclick="removecartItem('<%= cartItem._id %>')">Remove cartItem</button>
           </td>
         </tr>
       <% }) %>
@@ -31,8 +31,8 @@
 
 
 <script>
-    function updateQuantity(itemId, newQuantity) {
-      fetch(`/cart/${itemId}`, {
+    function updateQuantity(cartItemId, newQuantity) {
+      fetch(`/cart/${cartItemId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -51,15 +51,15 @@
       });
     }
   
-    function removeItem(itemId) {
-      fetch(`/cart/${itemId}`, {
+    function removecartItem(cartItemId) {
+      fetch(`/cart/${cartItemId}`, {
         method: 'DELETE'
       })
       .then(response => {
         if (response.ok) {
-          location.reload(); // Refresh the page to remove the item
+          location.reload(); // Refresh the page to remove the cartItem
         } else {
-          console.error('Failed to remove item.');
+          console.error('Failed to remove cartItem.');
         }
       })
       .catch(error => {

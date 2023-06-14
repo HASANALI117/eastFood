@@ -1,0 +1,20 @@
+<h1>Upload Image</h1>
+<form action="/upload" enctype="multipart/form-data" method="POST">
+   <div>
+    <label>Product Name</label>
+    <input type="text" name="name" required>
+   </div>
+   <div>
+    <label>Product Price</label>
+    <input type="number" name="price" required>
+   </div>
+   <div>
+    <label>Description</label>
+    <input type="text" name="desc">
+   </div>
+   <div>
+    <label>Product Image</label>
+    <input type="file" name="image"  accept="image/*" required>
+    <input type="submit" value="Upload Photo">
+   </div>
+</form>

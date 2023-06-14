@@ -19,7 +19,6 @@ exports.user_edit_get = async (req, res) => {
         res.render('profile/edit', {user})
     } catch (error) {
         console.log(error.message)
-        res.send(error.message)
     }
 }
 

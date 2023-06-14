@@ -2,6 +2,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
 const session = require("express-session");
+const bodyParser = require("body-parser");
+// const multer = require("multer");
+// const path = require('path');
+
+
 
 const passport = require("./lib/passportConfig");
 
@@ -11,9 +16,14 @@ const authRoute = require("./routes/auth");
 const menuRoute = require("./routes/menu");
 const userRoute = require("./routes/profile");
 const cartRoute = require("./routes/cart")
+const productRoute = require("./routes/product")
 
 //install our app
 const app = express();
+
+app.use(bodyParser.urlencoded(
+  { extended:true }
+))
 
 app.use(expressLayouts);
 app.set("view engine", "ejs");
@@ -42,12 +52,35 @@ app.use(function (req, res, next) {
   next();
 });
 
+// SET STORAGE
+// var storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, 'uploads')
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, file.fieldname + '-' + Date.now())
+//   }
+// })
+
+// var upload = multer({ storage: storage })
+
+// app.get("/",(req,res)=>{
+//   res.render("index");
+// })
+
+
+//Code to start server
+// app.listen(3000,function () {
+//     console.log("Server Started at PORT 2000");
+// })
+
 //mount our routes
 app.use("/", indexRoute);
 app.use("/", authRoute);
 app.use("/", menuRoute);
 app.use("/", userRoute);
 app.use("/", cartRoute);
+app.use("/", productRoute);
 
 
 //mount our server
@@ -59,7 +92,7 @@ app.listen(4000, () => {
 //connect to dataBase
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/eastFood", {
+  .connect("mongodb+srv://mohammedmahfodh:ezBXHNhsp49Cp7Im@cluster0.k4w1ysm.mongodb.net/", {
     useNewUrlparser: true,
     useUnifiedTopology: true,
   })
