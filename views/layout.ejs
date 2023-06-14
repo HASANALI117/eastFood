@@ -14,15 +14,18 @@
     />
     <!-- CSS Sheet -->
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
     <nav>
       <div>
-        <h1>eastFood</h1>
+        <a href="/"><h1>eastFood</h1></a>
+
       </div>
 
       <div class="rt">
         <% if (currentUser) {console.log(currentUser)%>
+        <a href="/user/index">Profile</a>
         <a href="/auth/logout">log Out</a>
         <% currentUser.firstName %> <% } else { %>
         <a href="/auth/signup"> <h3>Sign Up</h3> </a>
@@ -37,5 +40,9 @@
     <div id="footer">
       <p>© eastFood</p>
     </div>
-  </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script src="script.js"></script>
+    </body>
 </html>

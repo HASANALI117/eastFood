@@ -9,11 +9,12 @@ const passport = require("./lib/passportConfig");
 const indexRoute = require("./routes/index");
 const authRoute = require("./routes/auth");
 const menuRoute = require("./routes/menu");
+const userRoute = require("./routes/profile");
 
 //install our app
 const app = express();
 
-const port = 4000;
+const port = 3000;
 
 app.use(expressLayouts);
 app.set("view engine", "ejs");
@@ -46,6 +47,8 @@ app.use(function (req, res, next) {
 app.use("/", indexRoute);
 app.use("/", authRoute);
 app.use("/", menuRoute);
+app.use("/", userRoute);
+
 
 //mount our server
 

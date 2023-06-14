@@ -8,5 +8,6 @@ router.get('/auth/signin',authController.auth_signin_get)
 router.post('/auth/signup',authController.auth_signup_post)
 router.post('/auth/signin',authController.auth_signin_post)
 router.get('/auth/logout',authController.auth_logout_get)
-
+router.get('/auth/forgotPassword',authController.auth_forgotpassword_get)
+router.post('/auth/forgotPassword',authController.auth_forgotpassword_post)
 module.exports = router

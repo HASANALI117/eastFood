@@ -1,0 +1,20 @@
+<h3>Profile</h3>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td><%= currentUser.firstName %></td>
+        <td><%= currentUser.lastName %></td>
+        <td><%= currentUser.emailAddress %></td>
+        <td>
+          </form>
+          <a href="/user/edit?id=<%= currentUser._id %>">UPDATE</a>
+        </td>
+      </tr>
+</table>
