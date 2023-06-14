@@ -44,12 +44,14 @@ app.use(function (req, res, next) {
   next();
 });
 
+
 //mount our routes
 app.use("/", indexRoute);
 app.use("/", authRoute);
 app.use("/", menuRoute);
 app.use("/", userRoute);
 app.use("/",changePassRoute)
+
 
 
 //mount our server
@@ -61,7 +63,7 @@ app.listen(port, () => {
 //connect to dataBase
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/eastFood", {
+  .connect("mongodb+srv://mohammedmahfodh:ezBXHNhsp49Cp7Im@cluster0.k4w1ysm.mongodb.net/eastfood  ", {
     useNewUrlparser: true,
     useUnifiedTopology: true,
   })

@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const User = require("../models/User");
 const passport = require("../lib/passportConfig");
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 exports.auth_signup_get = (req, res) => {
   res.render("auth/signup");
