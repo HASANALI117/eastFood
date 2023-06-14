@@ -15,25 +15,86 @@ const upload = multer({ dest: 'uploads/' });
 // }
 
 exports.productController_get = async (req, res) => {
-    try {
-      const products = await Product.find();
-      res.render('Product/product', {products}); // Pass the products data to the EJS template
-    } catch (error) {
-      console.log(error.message);
-      res.send('Something went wrong 1');
-    }
-  };
+  try {
+    const products = await Product.find();
+    const populatedProducts = products.map((product) => ({
+      ...product._doc,
+      img: product.img && product.img.data ? product.img.data.toString('base64') : null
+    }));
+    res.render('Product/product', { products: populatedProducts });
+  } catch (error) {
+    console.log(error.message);
+    res.send('Something went wrong');
+  }
+};
 // POST a new product
+
+exports.uploadController_get = (req,res)=>{
+  res.render("Upload/upload");
+}
+
+exports.uploadController_post = async (req, res) => {
+  try {
+    const { name, price, desc } = req.body;
+    const img = fs.readFileSync(req.file.path);
+    const encode_img = img.toString('base64');
+
+    const newProduct = new Product({
+      name,
+      price,
+      desc,
+      img: req.file.filename
+    });
+
+    await newProduct.save();
+    console.log("Saved to database");
+    res.redirect('/products');
+  } catch (error) {
+    console.log(error);
+    res.send('Something went wrong');
+  }
+};
+// exports.uploadController_post = async(req, res) => {
+//   var img = fs.readFileSync(req.file.path);
+//   var encode_img = img.toString('base64');
+//   var final_img = {
+//     contentType: req.file.mimetype,
+//     image: Buffer.from(encode_img, 'base64')
+//   };
+
+//   const newproduct = new Product({
+//     name: req.body.name,
+//     price: req.body.price,
+//     desc: req.body.desc,
+//     img: {
+//       data: req.body.image.data,
+//       contentType: req.body.image.contentType
+//     }
+//   })
+
+//   try {
+//       await newproduct.save()
+//       console.log("Saved to database");
+//       res.redirect('/products'); // Redirect to the products page after successful upload
+//     }
+//     catch(error)  {
+//       console.log(error);
+//       res.send('Something went wrong');
+//     }
+// };
+
+
+
 exports.productController_post = async (req, res) => {
   try {
-    const { name, price } = req.body;
+    // const { name, price } = req.body;
 
-    const product = new Product({
-      name : req.body.product.name,
-      price: req.body.product.price
+    const newproduct = new Product({
+      name: req.body.name,
+      price: req.body.price
     })
 
-    await product.save()
+    await newproduct.save()
 
     
   } catch (error) {
@@ -41,36 +102,29 @@ exports.productController_post = async (req, res) => {
     res.send('Something went wrong 2');
   }
 }
-exports.uploadController_get = (req,res)=>{
-  res.render("Upload/upload");
+
+exports.detailsController_get = async(req, res) => {
+  try{
+    const products = await Product.find().populate('currentUser')
+    console.log(products)
+    res.render('mainDishes/mainDishes', { products })
+    // res.render('book/index', { books: books }) //does the same thing
+} catch (error) {
+    console.log(error.message)
+    res.send('HMMMMM Something is not right')
+}
 }
 
+exports.product_detail_get = async (req, res) => {
+  try {
+      const procuct = await Procuct.findById(req.query.id)
+      res.render('Product/details', {procuct} )
+  } catch (error) {
+      console.log(error.message)
+      res.send(error.message)
+  }
+}
 
-exports.uploadController_post = (req, res) => {
-  var img = fs.readFileSync(req.file.path);
-  var encode_img = img.toString('base64');
-  var final_img = {
-    contentType: req.file.mimetype,
-    image: Buffer.from(encode_img, 'base64')
-  };
-
-  const product = new Product({
-    name: req.body.name,
-    price: req.body.price,
-    desc: req.body.desc,
-    img: final_img
-  });
-
-  product.save()
-    .then(() => {
-      console.log("Saved to database");
-      res.redirect('/products'); // Redirect to the products page after successful upload
-    })
-    .catch((error) => {
-      console.log(error);
-      res.send('Something went wrong');
-    });
-};
 // exports.uploadController_post = async (req, res) => {
 //   try {
 //     const img = fs.readFileSync(req.file.path);

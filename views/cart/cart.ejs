@@ -1,7 +1,7 @@
 <form method="POST"  action="/cart">
 <h1>Cart</h1>
 
-<% if (cartItems.length === 0) { %>
+<% if (products.length === 0) { %>
   <p>Your cart is empty.</p>
 <% } else { %>
   <table>
@@ -14,14 +14,18 @@
       </tr>
     </thead>
     <tbody>
-      <% cartItems.forEach(cartItem => { %>
+      <% products.forEach(product => { %>
         <tr>
-          <td><%= cartItem.name %>hello</td>
-          <td><%= cartItem.price %>1200</td>
-          <td><%= cartItem.quantity %>100</td>
+          <td><%= product.name %></td>
+          <td><%= product.price %></td>
+          <td><%= product.quantity %></td>
+          <td><%= product.desc %></td>
           <td>
-            <button onclick="updateQuantity('<%= cartItem._id %>', '<%= cartItem.quantity + 1 %>')">Increase Quantity</button>
-            <button onclick="removecartItem('<%= cartItem._id %>')">Remove cartItem</button>
+          </td>
+          
+          <td>
+            <button onclick="updateQuantity('<%= product._id %>', '<%= product.quantity + 1 %>')">Increase Quantity</button>
+            <button onclick="removeProduct('<%= product._id %>')">Remove Product</button>
           </td>
         </tr>
       <% }) %>
@@ -31,8 +35,8 @@
 
 
 <script>
-    function updateQuantity(cartItemId, newQuantity) {
-      fetch(`/cart/${cartItemId}`, {
+    function updateQuantity(productId, newQuantity) {
+      fetch(`/cart/${productId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -51,15 +55,15 @@
       });
     }
   
-    function removecartItem(cartItemId) {
-      fetch(`/cart/${cartItemId}`, {
+    function removeproduct(productId) {
+      fetch(`/cart/${productId}`, {
         method: 'DELETE'
       })
       .then(response => {
         if (response.ok) {
-          location.reload(); // Refresh the page to remove the cartItem
+          location.reload(); // Refresh the page to remove the product
         } else {
-          console.error('Failed to remove cartItem.');
+          console.error('Failed to remove product.');
         }
       })
       .catch(error => {

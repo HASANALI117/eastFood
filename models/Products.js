@@ -12,12 +12,12 @@ const productSchema = new mongoose.Schema({
   desc: {
     type: String,
   },
-  img:
-  {
-    data: Buffer,
-    contentType: String
-}
-})
+  img: String,
+  users: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }]
+});
 
 const Product = new mongoose.model("Product", productSchema);
 

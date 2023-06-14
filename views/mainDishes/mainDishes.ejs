@@ -25,8 +25,8 @@
   <div class="in-cards">
     <% products.forEach((product) => { %>
     <div>
-      <h3>Chicken With Rice <%= product.name %></h3>
-      <p>price: 2.100 BD <%= product.price %></p>
+      <h3><%= product.name %></h3>
+      <p><%= product.price %></p>
       <button onclick="addToCart('<%= product._id %>')">Add to Cart</button>
     </div>
     <% }) %>

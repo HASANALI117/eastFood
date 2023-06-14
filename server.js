@@ -92,7 +92,7 @@ app.listen(4000, () => {
 //connect to dataBase
 
 mongoose
-  .connect("mongodb+srv://mohammedmahfodh:ezBXHNhsp49Cp7Im@cluster0.k4w1ysm.mongodb.net/", {
+  .connect("mongodb+srv://mohammedmahfodh:ezBXHNhsp49Cp7Im@cluster0.k4w1ysm.mongodb.net/eastfood", {
     useNewUrlparser: true,
     useUnifiedTopology: true,
   })
