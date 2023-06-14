@@ -1,7 +1,7 @@
 const Cart = require('../models/Cart')
 const Product = require('../models/Products');
 const User = require('../models/User');
-
+const bodyParser = require("body-parser");
 // exports.cart_add_get = async (req, res) => {
 //     try {
 //       const { name, price, quantity } = req.body;
@@ -23,20 +23,19 @@ const User = require('../models/User');
 exports.cart_add_get = async (req, res) => {
   try {
     const productId = req.body.productId;
-    console.log(productId)
+
     const product = await Product.findById(productId);
-    
     if (!product) {
       return res.status(404).json({ message: 'Product not found' });
     }
 
     const cart = new Cart({
       user: req.user._id,
-      products:productId
-
-    })
+      products: [{ product: productId }], // Pass the product details as an array of objects
+    });
 
     await cart.save();
+    console.log(productId)
 
     res.status(201).json({ message: 'Item added to cart' });
   } catch (error) {

@@ -2,7 +2,7 @@ var Product = require('../models/Products');
 const path = require('path');
 const fs = require('fs')
 const multer = require('multer');
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({ dest: 'public/uploads/' });
 
 // GET all products
 // exports.productController_get = async (req, res) => {
@@ -24,7 +24,7 @@ exports.productController_get = async (req, res) => {
     res.render('Product/product', { products: populatedProducts });
   } catch (error) {
     console.log(error.message);
-    res.send('Something went wrong');
+    res.send('Something went wrong1');
   }
 };
 // POST a new product
@@ -51,7 +51,7 @@ exports.uploadController_post = async (req, res) => {
     res.redirect('/products');
   } catch (error) {
     console.log(error);
-    res.send('Something went wrong');
+    res.send('Something went wrong2');
   }
 };
 // exports.uploadController_post = async(req, res) => {
@@ -90,8 +90,8 @@ exports.productController_post = async (req, res) => {
     // const { name, price } = req.body;
 
     const newproduct = new Product({
-      name: req.body.name,
-      price: req.body.price
+      name: req.body.product.name,
+      price: req.body.product.price
     })
 
     await newproduct.save()
@@ -99,15 +99,15 @@ exports.productController_post = async (req, res) => {
     
   } catch (error) {
     console.log(error.message);
-    res.send('Something went wrong 2');
+    res.send('Something went wrong 3');
   }
 }
 
 exports.detailsController_get = async(req, res) => {
   try{
-    const products = await Product.find().populate('currentUser')
-    console.log(products)
-    res.render('mainDishes/mainDishes', { products })
+    const product = await Product.find().populate('users')
+    console.log(product)
+    res.render('Product/details', { product })
     // res.render('book/index', { books: books }) //does the same thing
 } catch (error) {
     console.log(error.message)
@@ -117,13 +117,13 @@ exports.detailsController_get = async(req, res) => {
 
 exports.product_detail_get = async (req, res) => {
   try {
-      const procuct = await Procuct.findById(req.query.id)
-      res.render('Product/details', {procuct} )
+    const product = await Product.findById(req.query.id).populate('users');
+    res.render('Product/details', { product });
   } catch (error) {
-      console.log(error.message)
-      res.send(error.message)
+    console.log(error.message);
+    res.send(error.message);
   }
-}
+};
 
 // exports.uploadController_post = async (req, res) => {
 //   try {

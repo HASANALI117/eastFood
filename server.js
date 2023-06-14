@@ -52,27 +52,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-// SET STORAGE
-// var storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, 'uploads')
-//   },
-//   filename: function (req, file, cb) {
-//     cb(null, file.fieldname + '-' + Date.now())
-//   }
-// })
-
-// var upload = multer({ storage: storage })
-
-// app.get("/",(req,res)=>{
-//   res.render("index");
-// })
-
-
-//Code to start server
-// app.listen(3000,function () {
-//     console.log("Server Started at PORT 2000");
-// })
 
 //mount our routes
 app.use("/", indexRoute);

@@ -15,29 +15,42 @@
     </div>
 
     
-    <!-- <script>
-    function addToCart(productId) {
-        console.log(productId)
+    <script>
+function addToCart(productId) {
+  console.log(productId);
 
-    fetch('/cart', {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ productId }) // Send productId instead of productsId
-        
-    })
-    console.log(productId)
-    .then(response => {
-        if (response.ok) {
-        alert('Item added to cart');
-        } else {
-        console.error('Failed to add item to cart.');
-        }
-    })
-    .catch(error => {
-        console.error(error);
-    });
-    }
-      </script> -->
+  // Get existing cart data from local storage
+  let cartData = localStorage.getItem('cart');
+  let cartItems = [];
+
+  if (cartData) {
+    cartItems = JSON.parse(cartData);
+  }
+
+  // Create product object
+  let product = {
+    productId: productId,
+    quantity: 1, // You can set an initial quantity here
+  };
+
+  // Add product to cart items
+  cartItems.push(product);
+
+  // Update local storage
+  localStorage.setItem('cart', JSON.stringify(cartItems));
+
+  alert('Item added to cart');
+}
+function displayCart() {
+  let cartData = localStorage.getItem('cart');
+  let cartItems = [];
+
+  if (cartData) {
+    cartItems = JSON.parse(cartData);
+  }
+
+}
+
+
+      </script>
 </form>

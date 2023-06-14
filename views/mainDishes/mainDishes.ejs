@@ -27,7 +27,7 @@
     <div>
       <h3><%= product.name %></h3>
       <p><%= product.price %></p>
-      <button onclick="addToCart('<%= product._id %>')">Add to Cart</button>
+      <a href="/details?id=<%=product._id%>">View Item</a>
     </div>
     <% }) %>
   </div>
