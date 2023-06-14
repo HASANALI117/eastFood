@@ -33,7 +33,6 @@ exports.user_edit_get = async (req, res) => {
 
     } catch (error) {
         console.log(error.message)
-        res.send(error.message)
     }
 }
 

@@ -1,0 +1,40 @@
+{
+    "mainDishes": [
+      {
+        "id": "mainDishes-2",
+        "name": "Chicken With Rice",
+        "price": 2.100
+      },
+      {
+        "id": "mainDishes-3",
+        "name": "mojito",
+        "price": 5.2
+      }
+    ],
+
+    "Desserts": [
+      {
+        "id": "desserts-1",
+        "name": "Chicken With Rice",
+        "price": 2.100
+      },
+      {
+        "id": "desserts-2",
+        "name": "mojito",
+        "price": 5.2
+      }
+    ],
+
+    "Drinks": [
+      {
+        "id": "drinks-1",
+        "name": "Chicken With Rice",
+        "price": 2.100
+      },
+      {
+        "id": "drinks-2",
+        "name": "mojito",
+        "price": 5.2
+      }
+    ]
+}

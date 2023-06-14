@@ -9,10 +9,10 @@ router.post('/auth/signup',authController.auth_signup_post)
 router.post('/auth/signin',authController.auth_signin_post)
 router.get('/auth/logout',authController.auth_logout_get)
 
-router.get('/auth/google',passport.authenticate('google', { scope: ['profile'] }));
+// router.get('/auth/google',passport.authenticate('google', { scope: ['profile'] }));
 
-router.get('/auth/google/callback',passport.authenticate('google', { failureRedirect: '/login' }),
- function(req, res) { res.redirect('/'); });
+// router.get('/auth/google/callback',passport.authenticate('google', { failureRedirect: '/login' }),
+//  function(req, res) { res.redirect('/'); });
 
 
 module.exports = router

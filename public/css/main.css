@@ -55,93 +55,93 @@ a {
   width: 405px;
   color: white;
 }
-.b-1{
+.b-1 {
   background-image: url("https://img.freepik.com/free-photo/turkish-kunefe-garnished-with-pistachio_140725-3971.jpg?w=2000");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-2{
+.b-2 {
   background-image: url("https://images.pexels.com/photos/3298637/pexels-photo-3298637.jpeg?cs=srgb&dl=pexels-cottonbro-studio-3298637.jpg&fm=jpg");
-  background-repeat: no-repeat ;
+  background-repeat: no-repeat;
   background-size: cover;
 }
-.b-3{
+.b-3 {
   background-image: url("https://cdn.create.vista.com/api/media/medium/185258892/stock-photo-tattooed-female-bartender-showing-colleague?token=");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-11{
-  background-image: url("https://t3.ftcdn.net/jpg/05/78/78/44/360_F_578784418_YpH8UTACeKH6vU8EH94md5qzp0gmjAOo.jpg");
+.desserts-1 {
+  background-image: url("../images/Kunafa.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-12{
-  background-image: url("https://media.istockphoto.com/id/1375238139/photo/sambali-traditional-turkish-dessert-from-izmir.jpg?s=612x612&w=0&k=20&c=hggoL73lZv3IKgnyP0NNXLRe94qtpcSV70mX10WHQRE=");
+.desserts-2 {
+  background-image: url("../images/Basbosa.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-13{
-  background-image: url("https://media.istockphoto.com/id/1215358582/photo/turkish-dessert-baklava.jpg?s=612x612&w=0&k=20&c=WT7yDyNoZ7VJVc_KqSPlwtv2WFJA-NPso1FVm6mPdN0=");
+.desserts-3 {
+  background-image: url("../images/Baqlawa.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-21 {
-  background-image: url("https://i.pinimg.com/originals/ac/5d/a5/ac5da537b1ec83b35cb4ebbcfbc07eb8.jpg") ;
+.mainDishes-1 {
+  background-image: url("https://i.pinimg.com/originals/ac/5d/a5/ac5da537b1ec83b35cb4ebbcfbc07eb8.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-22 {
+.mainDishes-2 {
   background-image: url("https://img.sunset02.com/sites/default/files/chicken-rice-arroz-con-pollo-su.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-23 {
+.mainDishes-3 {
   background-image: url("https://www.theculinaryfoodgroup.com/wp-content/uploads/2021/08/iStock-1302436271.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-24 {
+.mainDishes-4 {
   background-image: url("https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Kebab.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-25 {
+.mainDishes-5 {
   background-image: url("https://en.icro.ir/uploads/1/2022/Apr/04/kabab%20koobideh.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-26{
+.mainDishes-6 {
   background-image: url("https://simplebites.net/wp-content/uploads/2021/12/dinner-plate-lamb-scaled.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-31{
-  background-image: url("https://media.cnn.com/api/v1/images/stellar/prod/230327115255-embargoed-01-pepsi-new-logo-2023.jpg?c=original");
+.drinks-1 {
+  background-image: url("../images/Pepsi.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-32{
-  background-image: url("https://cdnb.artstation.com/p/assets/images/images/058/868/869/large/hamza-mahmood-diet.jpg?1675150794");
+.drinks-2 {
+  background-image: url("../images/Pepsi\ Diet.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-33{
-  background-image: url("https://www.foodtodayeg.com/Content/Upload/large/520221811226963042456.jpg");
+.drinks-3 {
+  background-image: url("../images/Orange\ Juice.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-34{
-  background-image: url("https://www.atyabtabkha.com/uploads/sites/2/2021/10/b5f0e40fff6549a8716e2219780641278a82f75b.jpg");
+.drinks-4 {
+  background-image: url("../images/Banana\ Juice.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-35{
-  background-image: url("https://photos-us.bazaarvoice.com/photo/2/cGhvdG86ZHJpc2NvbGxz/bc06e197-a3b8-572d-b471-10c37403d54a");
+.drinks-5 {
+  background-image: url("../images/Mojito\ Mix\ Berry.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.b-36{
-  background-image: url("https://images.getrecipekit.com/20211223135801-a-20glass-20of-20pomegranate-20mojito-20mocktail-20in-20a-20wooden-20table.png?aspect_ratio=16:9&quality=90&");
+.drinks-6 {
+  background-image: url("../images/Mojito\ Pomegranate.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -183,9 +183,3 @@ a {
   font-size: small;
   font-weight: 100;
 }
-
-
-/* adding devs background */
-
-
-

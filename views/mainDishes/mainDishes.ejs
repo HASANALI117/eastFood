@@ -1,10 +1,11 @@
+<form method="POST" action="/mainDishes">
 <div id="mid-section">
   <div class="mid-section-header">
     <h2>Main Dishes</h2>
     <p>Explore 19 Melbourne neighborhoods. Which are right for you?</p>
   </div>
   <div class="cards">
-    <div class="box b-21">
+    <div class="box mainDishes-1">
       <div class="in-cards">
         <div>
           <h3>Maharaja Chicken Biryani</h3>
@@ -20,20 +21,23 @@
       </div>
     </div>
 
-    <div class="box b-22">
-      <div class="in-cards">
-        <div>
-          <h3>Chicken With Rice</h3>
-          <p>price: 2.100 BD</p>
-        </div>
-      </div>
+<div class="box mainDishes-2">
+  <div class="in-cards">
+    <% products.forEach((product) => { %>
+    <div>
+      <h3><%= product.name %></h3>
+      <p><%= product.price %></p>
+      <button onclick="addToCart('<%= product._id %>')">Add to Cart</button>
     </div>
+    <% }) %>
+  </div>
+</div>
 
-    <div class="box b-23">
+    <div class="box mainDishes-3">
       <div class="in-cards">
         <div>
-          <h3>Mini Italy</h3>
-          <p>price: 3.400 BD</p>
+         <h3>Mini Italy</h3>
+          <p></p>price: 3.400 BD</p>
         </div>
       </div>
     </div>
@@ -54,7 +58,7 @@
   </div>
 
   <div class="cards">
-    <div class="box b-24">
+    <div class="box mainDishes-4">
       <div class="in-cards">
         <div>
           <h3>Chicken Kebab</h3>
@@ -63,7 +67,7 @@
       </div>
     </div>
 
-    <div class="box b-25">
+    <div class="box mainDishes-5">
       <div class="in-cards">
         <div>
           <h3>Chilo Kebab With Rice</h3>
@@ -72,7 +76,7 @@
       </div>
     </div>
 
-    <div class="box b-26">
+    <div class="box mainDishes-6">
       <div class="in-cards">
         <div>
           <h3>Family Lamb Shank Meal</h3>
@@ -96,3 +100,25 @@
     </div>
   </div>
 </div>
+<script>
+  function addToCart(productsId) {
+    fetch('/cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ productsId })
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Item added to cart');
+      } else {
+        console.error('Failed to add item to cart.');
+      }
+    })
+    .catch(error => {
+      console.error(error);
+    });
+  }
+</script>
+</form>

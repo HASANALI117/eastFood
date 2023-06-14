@@ -2,6 +2,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
 const session = require("express-session");
+const bodyParser = require("body-parser");
+// const multer = require("multer");
+// const path = require('path');
+
+
 
 const passport = require("./lib/passportConfig");
 
@@ -11,11 +16,15 @@ const authRoute = require("./routes/auth");
 const menuRoute = require("./routes/menu");
 const userRoute = require("./routes/profile");
 const changePassRoute= require("./routes/change");
+const cartRoute = require("./routes/cart")
+const productRoute = require("./routes/product")
 
 //install our app
 const app = express();
 
-const port = 4000;
+app.use(bodyParser.urlencoded(
+  { extended:true }
+))
 
 app.use(expressLayouts);
 app.set("view engine", "ejs");
@@ -30,7 +39,7 @@ app.use(
 
 app.use(
   session({
-    secret: "thisIsSecret!",
+    secret: "This is a secret.",
     saveUninitialized: true,
     resave: false,
     cookie: { maxAge: 86400000 },
@@ -44,7 +53,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-
 //mount our routes
 app.use("/", indexRoute);
 app.use("/", authRoute);
@@ -52,18 +60,22 @@ app.use("/", menuRoute);
 app.use("/", userRoute);
 app.use("/",changePassRoute)
 
+app.use("/", cartRoute);
+app.use("/", productRoute);
 
-
+const port=4000
 //mount our server
 
-app.listen(port, () => {
-  console.log(`the menu open on port${port}`);
+// app.listen(port,()=>{
+//   console.log(`the Library open on port${port}`)
+// })
+app.listen(4000, () => {
+  console.log("Server running on port 4000");
 });
 
 //connect to dataBase
 
-mongoose
-  .connect("mongodb+srv://mohammedmahfodh:ezBXHNhsp49Cp7Im@cluster0.k4w1ysm.mongodb.net/eastfood  ", {
+mongoose.connect("mongodb+srv://mohammedmahfodh:ezBXHNhsp49Cp7Im@cluster0.k4w1ysm.mongodb.net/eastfood", {
     useNewUrlparser: true,
     useUnifiedTopology: true,
   })
