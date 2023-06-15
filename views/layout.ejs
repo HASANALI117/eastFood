@@ -38,7 +38,7 @@
       </div>
 
       <div class="rt">
-        <% if (currentUser) {console.log(currentUser)%>
+        <% if (currentUser) {%>
         <a href="/user/index"
           ><i class="fa-solid fa-user fa-2xl" style="color: #ffffff"></i
         ></a>
@@ -48,7 +48,6 @@
             style="color: #ffffff"
           ></i
         ></a>
-        <!-- <a href="/auth/logout">log Out</a> -->
         <% currentUser.firstName %> <% } else { %>
         <!-- <a href="/auth/signup"> <h3>Sign Up</h3> </a> -->
         <a href="/auth/signin"> <h3>Sign In</h3> </a>
