@@ -1,0 +1,98 @@
+{
+  "desserts": [
+    {
+      "id": "desserts-1",
+      "name": "Album 1",
+      "price": 1299,
+      "imgName": "Album 1.png"
+    },
+    {
+      "id": "desserts-2",
+      "name": "Album 2",
+      "price": 1499,
+      "imgName": "Album 2.png"
+    },
+    {
+      "id": "desserts-3",
+      "name": "Album 3",
+      "price": 999,
+      "imgName": "Album 3.png"
+    }
+  ],
+  "mainDishes": [
+    {
+      "id": "mainDishes-1",
+      "name": "T-Shirt",
+      "price": 1999,
+      "imgName": "Shirt.png"
+    },
+    {
+      "id": "mainDishes-2",
+      "name": "Coffee Cup",
+      "price": 699,
+      "imgName": "Cofee.png"
+    },
+    {
+      "id": "mainDishes-3",
+      "name": "T-Shirt",
+      "price": 1999,
+      "imgName": "Shirt.png"
+    },
+    {
+      "id": "mainDishes-4",
+      "name": "Coffee Cup",
+      "price": 699,
+      "imgName": "Cofee.png"
+    },
+    {
+      "id": "mainDishes-5",
+      "name": "T-Shirt",
+      "price": 1999,
+      "imgName": "Shirt.png"
+    },
+    {
+      "id": "mainDishes-6",
+      "name": "Coffee Cup",
+      "price": 699,
+      "imgName": "Cofee.png"
+    }
+  ],
+  "drinks": [
+    {
+      "id": "drinks-1",
+      "name": "T-Shirt",
+      "price": 1999,
+      "imgName": "Shirt.png"
+    },
+    {
+      "id": "drinks-2",
+      "name": "Coffee Cup",
+      "price": 699,
+      "imgName": "Cofee.png"
+    },
+    {
+      "id": "drinks-3",
+      "name": "T-Shirt",
+      "price": 1999,
+      "imgName": "Shirt.png"
+    },
+    {
+      "id": "drinks-4",
+      "name": "Coffee Cup",
+      "price": 699,
+      "imgName": "Cofee.png"
+    },
+    {
+      "id": "drinks-5",
+      "name": "T-Shirt",
+      "price": 1999,
+      "imgName": "Shirt.png"
+    },
+    {
+      "id": "drinks-6",
+      "name": "Coffee Cup",
+      "price": 699,
+      "imgName": "Cofee.png"
+    }
+  ]
+}

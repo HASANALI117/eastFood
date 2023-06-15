@@ -2,25 +2,28 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   margin: 0;
+  background-color: rgb(235, 235, 235);
 }
 nav {
+  background-color: #454545;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 10px;
 }
 h1 {
+  color: white;
   font-family: "Bree Serif", serif;
   font-size: 40px;
-  margin: 5px 20px;
+  margin: 10px 20px;
 }
-.Profile-t{
-  width: 50%;
-  text-align: center;
-  border: 2px solid black;
-  margin: 10%;
+i {
+  margin: 35px 20px;
 }
-.td-profile{
-  border-top: 1px solid black;
-  padding: 10px;
+h3 {
+  color: white;
+  font-family: "Nunito", sans-serif;
+  margin: 20px 20px;
+  font-weight: 700;
 }
 .rt {
   display: flex;
@@ -36,19 +39,23 @@ a {
 #mid-section {
   text-align: center;
   font-weight: 700;
+  margin-top: 50px;
 }
 .mid-section-header p {
   font-size: 15px;
   margin-top: 0;
 }
-.mid-section-header h2 {
+h2 {
   font-size: 40px;
-  margin-bottom: 30px;
+  margin: 10px auto 30px;
   font-weight: 900;
+  text-align: center;
 }
 .cards {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 .box {
   height: 320px;
@@ -86,32 +93,38 @@ a {
   background-size: cover;
 }
 .mainDishes-1 {
-  background-image: url("https://i.pinimg.com/originals/ac/5d/a5/ac5da537b1ec83b35cb4ebbcfbc07eb8.jpg");
+  background-image: url("../images/Maharaja\ Chicken\ Biryani.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mainDishes-2 {
-  background-image: url("https://img.sunset02.com/sites/default/files/chicken-rice-arroz-con-pollo-su.jpg");
+  background-image: url("../images/Chicken\ With\ Rice.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mainDishes-3 {
-  background-image: url("https://www.theculinaryfoodgroup.com/wp-content/uploads/2021/08/iStock-1302436271.jpg");
+  background-image: url("../images/Mini\ Italy.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mainDishes-4 {
-  background-image: url("https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Kebab.jpg");
+  background-image: url("../images/Chicken\ Kebab.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mainDishes-5 {
-  background-image: url("https://en.icro.ir/uploads/1/2022/Apr/04/kabab%20koobideh.jpg");
+  background-image: url("../images/Chilo\ Kebab\ With\ Rice.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mainDishes-6 {
-  background-image: url("https://simplebites.net/wp-content/uploads/2021/12/dinner-plate-lamb-scaled.jpg");
+  background-image: url("../images/Family\ Lamb\ Shank\ Meal.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -183,3 +196,8 @@ a {
   font-size: small;
   font-weight: 100;
 }
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+}
+

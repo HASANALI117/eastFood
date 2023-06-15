@@ -12,22 +12,45 @@
       href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <!-- CSS Sheet -->
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- BootStrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!-- CSS Sheets -->
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body>
     <nav>
       <div>
         <a href="/"><h1>eastFood</h1></a>
-
       </div>
 
       <div class="rt">
         <% if (currentUser) {console.log(currentUser)%>
-        <a href="/user/index">Profile</a>
-        <a href="/auth/logout">log Out</a>
+        <a href="/user/index"
+          ><i class="fa-solid fa-user fa-2xl" style="color: #ffffff"></i
+        ></a>
+        <a href="/cart"
+          ><i
+            class="fa-solid fa-cart-shopping fa-2xl"
+            style="color: #ffffff"
+          ></i
+        ></a>
+        <!-- <a href="/auth/logout">log Out</a> -->
         <% currentUser.firstName %> <% } else { %>
-        <a href="/auth/signup"> <h3>Sign Up</h3> </a>
+        <!-- <a href="/auth/signup"> <h3>Sign Up</h3> </a> -->
         <a href="/auth/signin"> <h3>Sign In</h3> </a>
 
         <% } %>
@@ -36,8 +59,14 @@
 
     <%-body%>
 
-    <div id="footer">
-      <p>© eastFood</p>
-    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
