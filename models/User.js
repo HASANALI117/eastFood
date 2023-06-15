@@ -25,10 +25,6 @@ const userSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    phoneNumber: {
-      type: String,
-      require: true,
-    },
   },
   {
     timestamps: true,
@@ -36,7 +32,6 @@ const userSchema = mongoose.Schema(
 );
 
 userSchema.methods.verifyPassword = function (password) {
-  console.log("Verifying Password: ", password);
   return bcrypt.compareSync(password, this.password);
 };
 

@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
 const session = require("express-session");
+const bodyParser = require("body-parser");
+const ejs = require("ejs");
 
 const passport = require("./lib/passportConfig");
 
@@ -10,6 +12,7 @@ const indexRoute = require("./routes/index");
 const authRoute = require("./routes/auth");
 const menuRoute = require("./routes/menu");
 const userRoute = require("./routes/profile");
+const adminRoute = require("./routes/admin");
 
 //install our app
 const app = express();
@@ -24,6 +27,8 @@ app.use(
     extended: true,
   })
 );
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   session({
@@ -47,6 +52,22 @@ app.use("/", authRoute);
 app.use("/", menuRoute);
 app.use("/", userRoute);
 
+//mount admin routes
+app.use("/", adminRoute);
+
+app.get("/", (req, res) => {
+  res.render("home/index", {
+    title: "My Website",
+    css: "./public/css/main.css",
+  });
+});
+
+app.get("/auth/sigin", (req, res) => {
+  res.render("auth/signin", {
+    title: "Sign In",
+    css: "./public/style.css",
+  });
+});
 
 //mount our server
 

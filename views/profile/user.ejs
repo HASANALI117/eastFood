@@ -1,18 +1,17 @@
-<h3>Profile</h3>
+<h2 style="margin: 30px auto">Profile</h2>
 
-<table class="Profile-t">
-    <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email Address</th>
-    </tr>
-    <tr>
-        <td class="td-profile"><%= currentUser.firstName %></td>
-        <td class="td-profile"><%= currentUser.lastName %></td>
-        <td class="td-profile"><%= currentUser.emailAddress %></td>
-        <td>
-          </form>
-          <a href="/user/edit?id=<%= currentUser._id %>">UPDATE</a>
-        </td>
-      </tr>
+<table class="table table-striped alignmiddle" style="text-align: center">
+  <tr class="table-secondary">
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email Address</th>
+  </tr>
+  <tr class="table-light">
+    <td class="td-profile"><%= currentUser.firstName %></td>
+    <td class="td-profile"><%= currentUser.lastName %></td>
+    <td class="td-profile"><%= currentUser.emailAddress %></td>
+    <td>
+      <a href="/user/edit?id=<%= currentUser._id %>">Edit</a>
+    </td>
+  </tr>
 </table>
