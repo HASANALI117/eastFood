@@ -94,31 +94,37 @@ h2 {
 }
 .mainDishes-1 {
   background-image: url("../images/Maharaja\ Chicken\ Biryani.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mainDishes-2 {
   background-image: url("../images/Chicken\ With\ Rice.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mainDishes-3 {
   background-image: url("../images/Mini\ Italy.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mainDishes-4 {
   background-image: url("../images/Chicken\ Kebab.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mainDishes-5 {
   background-image: url("../images/Chilo\ Kebab\ With\ Rice.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mainDishes-6 {
   background-image: url("../images/Family\ Lamb\ Shank\ Meal.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -194,3 +200,4 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
+
