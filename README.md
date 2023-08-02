@@ -1,17 +1,10 @@
 # eastFood
-## ERD of THe Idea:
-#### it is a menu that display (Main Dishes , Desserts , Drinks) , user should sign-in OR sign_up to add items into the cart, user shpuld be able to edit his own information also able to change Password when forgetting it.
-## wireframes:
-### https://www.figma.com/file/Bm8ylMPWT96rLJBJ3OizaG/EastFood?type=design&node-id=0%3A1&t=v77PyO5hIkMERDju-1
-## screenshot of your trello board:
-### https://git.generalassemb.ly/zainabjalil/eastFood/projects/1
-## Link to our deployed application:
-###
-## List of unsolved problems.
-### [1] Cart is not linked to the Databse
-## Future enhancements:
-### [1] make it portable to mobile phones 
-### [2] menu can show more rated dishes on the top of the page depending on dish number of times dish is added to cart.
-### [3] user/client can add comment for every dish to the chief.
+**eastFood** is a restaurant management system built with Node.js with Express and React.js. It allows users to manage their restaurant's menu, orders, and customers.
 
-### https://www.figma.com/file/Bm8ylMPWT96rLJBJ3OizaG/EastFood?type=design&node-id=0-1
+## Features
+* **Manage menu items:** Add, edit, and delete menu items.
+* **Manage orders:** Take orders, track order status, and send order confirmations.
+* **Manage customers:** Add, edit, and delete customers.
+* **Generate reports:** Generate reports on sales, orders, and customers.
+
+## [_Wireframes_](https://www.figma.com/file/Bm8ylMPWT96rLJBJ3OizaG/EastFood?type=design&node-id=0%3A1&t=v77PyO5hIkMERDju-1)
